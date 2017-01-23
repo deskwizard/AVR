@@ -1,0 +1,20 @@
+Bill of Material
+
+Designator		Description					Note
+
+R1, R2			68 ohm resistor
+R3				1.3k ohm resistor
+R4,R5			1k resistor					Might be adjusted for change in LED brightness
+C1, C2			10uF capacitor			
+C3				0.1uF capacitor				Code # is 104
+IC1				Attiny45/Attiny85		
+U1				3.3v voltage regulator		Low dropout REQUIRED (LD1117-3v3 suggested)
+U1-SCK			8 pin DIP socket
+KEY0			Momentary push button
+LED0, LED1		LED
+USB				USB connector or header		
+
+Enclosure pictured Bud Industries HH-3641
+Push button pictured is from a local store, no information available
+
+

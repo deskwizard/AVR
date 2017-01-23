@@ -1,0 +1,55 @@
+
+Project: 	1key_x5
+Author: 	Charles Dorval (Deskwizard)
+ 
+	V-USB HID 1 key keyboard example with status LED
+
+	Demonstrate a 1 key USB HID keyboard with the use of V-USB 
+	on an ATTINY45/85 using the internal oscillator tuned at 16.5mHz
+ 
+
+ 	A button press toggles between sending 'W' (Left shift + w) and idle states
+	
+
+	USB states, LEDs and button GPIOs are configured in defines.h
+
+	Default GPIOs assignment are as follows:
+		LED0 	PB3
+		LED1	PB0
+		KEY0	PB4
+
+		LED0 follows the USB states, on while sending keys and off when idle.
+		LED1 is the Status LED and is configured as NUM_LOCK LED by default.
+		KEY0 is a momentary push button in an active low configuration.
+
+
+ 	Available keycodes, modifiers and status LEDs definitions are located in keycodes.h
+	
+	Please note that not all keycodes are defined, see link in keycodes.h
+	for complete USB HID keycodes table.	 
+
+
+Based on:	 V-USB example code by Christian Starkjohann
+ 			 AVR ATtiny USB Tutorial by Joonas Pihlajamaa
+ 			 V-USB HIDkeys reference implementation
+ 			 V-USB EasyLogger reference implementation
+ 			 Flip's 1 key keyboard example
+ 			 USB descriptors from Frank Zhao's USB Business Card project
+ 			 Various other V-USB examples
+			 Danni's Debounce by Peter Dannegger
+
+
+In sources/ directory:
+To compile:					make
+To compile and flash:		make flash
+To clean and compile:		make clean
+
+Compiler:	gcc 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4)
+
+Please note that the provided main file is configured to use the "usbasp" programmer
+by default. Edit the makefile accordingly if using another programmer.
+
+Compiled HEX file is also provided for convenience.
+
+Licensed under GNU GPL v3 (see License.txt)
+
