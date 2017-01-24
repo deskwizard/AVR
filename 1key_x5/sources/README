@@ -44,6 +44,9 @@ To compile:					make
 To compile and flash:		make flash
 To clean and compile:		make clean
 
+To flash fuses:
+avrdude -c usbasp -p attiny45 -v -U lfuse:w:0xfe:m -U hfuse:w:0xd5:m -U efuse:w:0xff:m
+
 Compiler:	gcc 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4)
 
 Please note that the provided main file is configured to use the "usbasp" programmer
